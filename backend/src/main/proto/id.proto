@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+option java_package = "com.bookstore.proto.id";
+option java_multiple_files = true;
+
+package id;
+
+message LibraryId
+{
+  string hex_string = 1;
+}
+
+message BookcaseId
+{
+  string hex_string = 1;
+}
+
+message BookId
+{
+  string hex_string = 1;
+}
