@@ -1,0 +1,211 @@
+{
+    "root": true,
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "project": [
+            "./tsconfig.json"
+        ]
+    },
+    "plugins": [
+        "@typescript-eslint",
+        "jest",
+        "react"
+    ],
+    "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/eslint-recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:@typescript-eslint/recommended-requiring-type-checking",
+        "plugin:jest/recommended",
+        "plugin:react/recommended"
+    ],
+    "settings": {
+        "react": {
+            "version": "detect"
+        }
+    },
+    "ignorePatterns": [
+        // TODO specify ts specific lints, so that build-time js files can be linted
+        ".storybook/main.js",
+        ".storybook/middle-ware.js",
+        "craco.config.js",
+        "jest.config.js",
+        "setupProxy.js",
+        "src/generated/protos.d.ts",
+        "src/generated/protos.js",
+        "target/",
+        "build/"
+    ],
+    "rules": {
+        // eslint (with typescript fixes)
+        "array-bracket-newline": [
+            "error",
+            "consistent"
+        ],
+        "array-bracket-spacing": [
+            "error",
+            "always"
+        ],
+        "array-element-newline": [
+            "error",
+            "consistent"
+        ],
+        "block-spacing": "error",
+        "@typescript-eslint/brace-style": [
+            "error",
+            "allman"
+        ],
+        "@typescript-eslint/comma-spacing": "error",
+        "computed-property-spacing": "error",
+        "consistent-return": "error",
+        "curly": [
+            "error",
+            "multi-line",
+            "consistent"
+        ],
+        "dot-location": [
+            "error",
+            "property"
+        ],
+        "eol-last": "error",
+        "eqeqeq": "error",
+        "@typescript-eslint/func-call-spacing": "error",
+        "function-call-argument-newline": [
+            "error",
+            "consistent"
+        ],
+        "function-paren-newline": [
+            "error",
+            "consistent"
+        ],
+        "implicit-arrow-linebreak": "error",
+        "@typescript-eslint/indent": "error",
+        "jsx-quotes": "error",
+        "key-spacing": "error",
+        "keyword-spacing": "error",
+        "new-parens": "error",
+        "no-eval": "error",
+        "no-implied-eval": "error",
+        "no-multi-spaces": "error",
+        "no-multi-str": "error",
+        "no-new-wrappers": "error",
+        "no-trailing-spaces": "error",
+        "no-var": "error",
+        "@typescript-eslint/no-unused-vars": [
+            "error",
+            {
+                "ignoreRestSiblings": true
+            }
+        ],
+        "@typescript-eslint/no-use-before-define": "off",
+        "no-whitespace-before-property": "error",
+        "object-curly-newline": "error",
+        "object-curly-spacing": [
+            "error",
+            "always"
+        ],
+        "object-property-newline": [
+            "error",
+            {
+                "allowAllPropertiesOnSameLine": true
+            }
+        ],
+        "operator-linebreak": "error",
+        "@typescript-eslint/quotes": "error",
+        "@typescript-eslint/semi": "error",
+        "semi-spacing": "error",
+        "semi-style": "error",
+        "space-before-blocks": "error",
+        "@typescript-eslint/space-before-function-paren": [
+            "error",
+            {
+                "anonymous": "always",
+                "named": "never",
+                "asyncArrow": "always"
+            }
+        ],
+        "space-in-parens": [
+            "error",
+            "always"
+        ],
+        "space-infix-ops": "error",
+        "space-unary-ops": "error",
+        "switch-colon-spacing": "error",
+        "template-tag-spacing": "error",
+        "unicode-bom": "error",
+        // typescript
+        "@typescript-eslint/array-type": [
+            "error",
+            {
+                "default": "generic"
+            }
+        ],
+        "@typescript-eslint/explicit-function-return-type": "off",
+        "@typescript-eslint/explicit-module-boundary-types": "error",
+        "@typescript-eslint/member-delimiter-style": [
+            "error",
+            {
+                "multiline": {
+                    "delimiter": "comma",
+                    "requireLast": true
+                },
+                "singleline": {
+                    "delimiter": "comma",
+                    "requireLast": false
+                },
+                "overrides": {
+                    "interface": {
+                        "multiline": {
+                            "delimiter": "semi",
+                            "requireLast": true
+                        },
+                        "singleline": {
+                            "delimiter": "semi",
+                            "requireLast": false
+                        }
+                    }
+                }
+            }
+        ],
+        "@typescript-eslint/no-floating-promises": "error",
+        "@typescript-eslint/no-throw-literal": "error",
+        "@typescript-eslint/no-unnecessary-boolean-literal-compare": "error",
+        "@typescript-eslint/prefer-regexp-exec": "off",
+        "@typescript-eslint/unbound-method": [
+            "error",
+            {
+                "ignoreStatic": true
+            }
+        ],
+        // react
+        "react/jsx-boolean-value": "error",
+        "react/jsx-closing-bracket-location": "error",
+        "react/jsx-closing-tag-location": "error",
+        "react/jsx-curly-brace-presence": "error",
+        "react/jsx-curly-newline": [
+            "error",
+            "consistent"
+        ],
+        "react/jsx-curly-spacing": "error",
+        "react/jsx-equals-spacing": [
+            "error",
+            "always"
+        ],
+        "react/jsx-fragments": [
+            "error",
+            "element"
+        ],
+        "react/jsx-indent": "error",
+        "react/jsx-indent-props": "error",
+        "react/jsx-no-useless-fragment": "error",
+        "react/jsx-tag-spacing": [
+            "error",
+            {
+                "closingSlash": "never",
+                "beforeSelfClosing": "never",
+                "afterOpening": "never",
+                "beforeClosing": "never"
+            }
+        ]
+    }
+}
